@@ -1,22 +1,27 @@
-import { ButtonHTMLAttributes, ReactNode } from 'react'
+import { ButtonHTMLAttributes, AnchorHTMLAttributes, ReactNode } from 'react'
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+type ButtonProps<T extends React.ElementType = 'button'> = {
   children: ReactNode
   variant?: 'primary' | 'secondary' | 'solar' | 'telecom' | 'hr' | 'outline'
   size?: 'sm' | 'md' | 'lg'
   className?: string
-  as?: React.ElementType
-}
+  as?: T
+  disabled?: boolean
+} & (T extends 'a' | typeof import('next/link').default
+  ? Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'disabled'>
+  : ButtonHTMLAttributes<HTMLButtonElement>)
 
-export function Button({
+export function Button<T extends React.ElementType = 'button'>({
   children,
   variant = 'primary',
   size = 'md',
   className = '',
   disabled,
-  as: Component = 'button',
+  as,
   ...props
-}: ButtonProps) {
+}: ButtonProps<T>) {
+  const Component = (as || 'button') as React.ElementType
+  const isButton = Component === 'button'
   const baseClasses =
     'font-medium rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden hover-lift active:scale-95'
 
@@ -44,7 +49,7 @@ export function Button({
   return (
     <Component
       className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`}
-      disabled={disabled}
+      {...(isButton && { disabled })}
       {...props}
     >
       <span className="relative z-10">{children}</span>

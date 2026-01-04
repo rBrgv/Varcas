@@ -38,7 +38,7 @@ export function SmartEnquiryForm({ onSuccess, jobId, serviceType }: SmartEnquiry
       name: '',
       email: '',
       phone: '',
-      serviceType: (serviceType as 'solar' | 'telecom' | 'hr' | 'general') || 'general',
+      serviceType: serviceType || 'general',
       message: '',
       language: i18n.language || 'en',
       resumeUrl: '',
@@ -269,7 +269,7 @@ export function SmartEnquiryForm({ onSuccess, jobId, serviceType }: SmartEnquiry
         rows={5}
       />
 
-      {(isJobApplication || serviceType === 'hr') && (
+      {isJobApplication && (
         <div>
           <label className="block text-sm font-medium text-neutral-700 mb-2">
             Resume {isJobApplication && <span className="text-red-500">*</span>}

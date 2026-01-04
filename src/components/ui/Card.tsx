@@ -1,6 +1,6 @@
-import { ReactNode } from 'react'
+import { ReactNode, HTMLAttributes } from 'react'
 
-interface CardProps {
+interface CardProps extends HTMLAttributes<HTMLDivElement> {
   children: ReactNode
   className?: string
   padding?: 'sm' | 'md' | 'lg'
@@ -12,6 +12,7 @@ export function Card({
   className = '',
   padding = 'md',
   variant = 'default',
+  ...props
 }: CardProps) {
   const paddingClasses = {
     sm: 'p-4',
@@ -28,6 +29,7 @@ export function Card({
     <div
       className={`${variantClasses[variant]} ${paddingClasses[padding]} ${className}`}
       style={variant === 'default' ? { transformStyle: 'preserve-3d' } : {}}
+      {...props}
     >
       <div className={variant === 'default' ? 'relative z-10' : ''} style={variant === 'default' ? { transform: 'translateZ(20px)' } : {}}>
         {children}

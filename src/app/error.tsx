@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect } from 'react'
+import Link from 'next/link'
 import { Container, Button } from '@/components/ui'
 
 export default function Error({
@@ -27,7 +28,7 @@ export default function Error({
             <Button variant="primary" size="lg" onClick={reset}>
               Try Again
             </Button>
-            <Button variant="outline" size="lg" as="a" href="/contact">
+            <Button variant="outline" size="lg" as={Link} href="/contact">
               Contact Support
             </Button>
           </div>
