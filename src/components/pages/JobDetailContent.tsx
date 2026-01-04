@@ -56,7 +56,7 @@ export function JobDetailContent({ jobId }: { jobId: string }) {
       <Container className="py-20">
         <Card className="text-center py-12">
           <h2 className="text-2xl font-bold text-primary-700 mb-4">Job Not Found</h2>
-          <p className="text-neutral-600 mb-6">The job you're looking for doesn't exist or has been removed.</p>
+          <p className="text-neutral-600 mb-6">The job you&apos;re looking for doesn&apos;t exist or has been removed.</p>
           <Button variant="primary" as={Link} href="/careers">
             Back to Careers
           </Button>

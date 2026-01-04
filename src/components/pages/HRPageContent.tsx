@@ -76,7 +76,7 @@ export function HRPageContent() {
                 Looking for Talent?
               </h2>
               <p className="text-neutral-700 mb-8 text-lg">
-                Contact us to discuss your hiring needs. We'll help you find the right candidates.
+                Contact us to discuss your hiring needs. We&apos;ll help you find the right candidates.
               </p>
               <Button
                 variant="hr"

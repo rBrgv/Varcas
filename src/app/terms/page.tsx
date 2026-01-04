@@ -20,13 +20,13 @@ export default function TermsPage() {
           <section>
             <h2 className="text-2xl font-bold text-primary-700 mb-4">2. Use License</h2>
             <p>
-              Permission is granted to temporarily download one copy of the materials on Varcas Enterprises' website for personal, non-commercial transitory viewing only.
+              Permission is granted to temporarily download one copy of the materials on Varcas Enterprises&apos; website for personal, non-commercial transitory viewing only.
             </p>
           </section>
           <section>
             <h2 className="text-2xl font-bold text-primary-700 mb-4">3. Disclaimer</h2>
             <p>
-              The materials on Varcas Enterprises' website are provided on an 'as is' basis. Varcas Enterprises makes no warranties, expressed or implied.
+              The materials on Varcas Enterprises&apos; website are provided on an &apos;as is&apos; basis. Varcas Enterprises makes no warranties, expressed or implied.
             </p>
           </section>
           <section>
