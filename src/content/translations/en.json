@@ -1,0 +1,61 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "careers": "Careers",
+    "contact": "Contact"
+  },
+  "home": {
+    "heroTitle": "Varcas Enterprises",
+    "heroSubtitle": "Trusted partner for enterprise solutions across Andhra Pradesh. Serving airports, educational institutions, and commercial facilities.",
+    "ourServices": "Our Services",
+    "servicesDesc": "Comprehensive solutions tailored for enterprise clients across multiple sectors",
+    "solarDesc": "Enterprise-grade solar solutions for airports, institutions, and commercial facilities",
+    "telecomDesc": "Professional telecom infrastructure and network solutions",
+    "hrDesc": "Strategic HR recruitment and talent management services",
+    "trustedBy": "Trusted by Leading Organizations",
+    "coverage": "Our Coverage",
+    "andhraPradesh": "Andhra Pradesh",
+    "expandCoverage": "View Pan-India Coverage",
+    "india": "Pan-India Presence"
+  },
+  "service": {
+    "solar": {
+      "title": "Solar Solutions",
+      "description": "Enterprise-grade solar solutions"
+    },
+    "telecom": {
+      "title": "Telecom Services",
+      "description": "Professional telecom infrastructure"
+    },
+    "hr": {
+      "title": "HR Services",
+      "description": "Strategic HR recruitment"
+    }
+  },
+  "testimonials": {
+    "title": "What Our Clients Say"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions"
+  },
+  "certifications": {
+    "title": "Our Certifications & Awards"
+  },
+  "projects": {
+    "title": "Our Recent Projects",
+    "filter": {
+      "all": "All"
+    },
+    "noProjects": "No projects found for this category."
+  },
+  "careers": {
+    "noJobs": "No job openings at the moment. Please check back later."
+  },
+  "resources": {
+    "title": "Resources & Downloads",
+    "download": "Download",
+    "comingSoon": "Coming Soon"
+  }
+}
+
