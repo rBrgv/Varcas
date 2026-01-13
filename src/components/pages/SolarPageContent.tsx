@@ -448,15 +448,6 @@ export function SolarPageContent() {
       <Testimonials
         testimonials={[
           {
-            id: '1',
-            name: 'Rajesh Kumar',
-            role: 'Facilities Manager',
-            company: 'Tirupati Airport',
-            content: 'Varcas Enterprises delivered an exceptional solar installation for our airport. The system has been running flawlessly and significantly reduced our energy costs.',
-            rating: 5,
-            service: 'solar',
-          },
-          {
             id: '2',
             name: 'Dr. Priya Sharma',
             role: 'Principal',

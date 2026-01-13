@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Container, SectionHeading, Card, Button } from '@/components/ui'
@@ -116,6 +117,50 @@ export function HomePageContent() {
             <div className="w-1.5 h-3 bg-white/60 rounded-full mt-1 animate-bounce"></div>
           </div>
         </div>
+      </section>
+
+      {/* Partner Logos Section */}
+      <section className="py-16 md:py-24 bg-white border-b border-primary-100/50">
+        <Container>
+          <ScrollReveal variant="fade">
+            <div className="text-center mb-12">
+              <p className="text-sm text-neutral-500 uppercase tracking-widest mb-4 font-semibold">
+                Authorised Partners
+              </p>
+              <h2 className="text-2xl md:text-3xl font-bold text-primary-700 mb-4">
+                We are an authorised sales partner for Waaree and Varna Solar
+              </h2>
+            </div>
+          </ScrollReveal>
+          
+          <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
+            <ScrollReveal variant="scale" delay={0}>
+              <div className="flex flex-col items-center group">
+                <Image
+                  src="https://api.waaree.com/upload/media/image_1_1_1749036191.png"
+                  alt="Waaree Logo"
+                  width={150}
+                  height={80}
+                  className="h-16 md:h-20 w-auto object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                  unoptimized
+                />
+              </div>
+            </ScrollReveal>
+            
+            <ScrollReveal variant="scale" delay={100}>
+              <div className="flex flex-col items-center group">
+                <Image
+                  src="https://varnasolar.com/images/varna-logo2.png"
+                  alt="Varna Solar Logo"
+                  width={350}
+                  height={210}
+                  className="h-40 md:h-56 w-auto object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                  unoptimized
+                />
+              </div>
+            </ScrollReveal>
+          </div>
+        </Container>
       </section>
 
       {/* Statistics Section */}
@@ -404,6 +449,39 @@ export function HomePageContent() {
           </div>
         </Container>
       </section>
+
+      {/* Testimonials Section */}
+      <Testimonials
+        testimonials={[
+          {
+            id: '1',
+            name: 'Dr. Priya Sharma',
+            role: 'Principal',
+            company: 'AP Educational Institution',
+            content: 'Professional service from start to finish. The solar panels are performing excellently and our institution is now energy independent.',
+            rating: 5,
+            service: 'solar',
+          },
+          {
+            id: '2',
+            name: 'Vikram Reddy',
+            role: 'Operations Director',
+            company: 'Commercial Complex',
+            content: 'Outstanding quality and service. The installation was completed on time and the team was very professional throughout the process.',
+            rating: 5,
+            service: 'solar',
+          },
+          {
+            id: '3',
+            name: 'Anil Kumar',
+            role: 'IT Manager',
+            company: 'Telecom Company',
+            content: 'Excellent telecom infrastructure solutions. The team provided reliable network setup and ongoing support.',
+            rating: 5,
+            service: 'telecom',
+          },
+        ]}
+      />
 
       {/* FAQ Section */}
       <FAQ
