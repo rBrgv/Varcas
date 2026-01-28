@@ -140,7 +140,7 @@ export function SolarPageContent() {
                 We are an authorised sales partner for Waaree and Varna Solar
               </h2>
               <p className="text-neutral-600 max-w-2xl mx-auto">
-                Trusted partnerships with India's leading solar manufacturers for quality enterprise solutions
+                Trusted partnerships with India&apos;s leading solar manufacturers for quality enterprise solutions
               </p>
             </div>
           </ScrollReveal>
@@ -183,8 +183,8 @@ export function SolarPageContent() {
               <button
                 onClick={() => setActiveTab('residential')}
                 className={`px-6 py-2 rounded-md font-medium transition-colors ${activeTab === 'residential'
-                    ? 'bg-primary-500 text-white'
-                    : 'text-neutral-700 hover:bg-neutral-100'
+                  ? 'bg-primary-500 text-white'
+                  : 'text-neutral-700 hover:bg-neutral-100'
                   }`}
               >
                 Residential
@@ -192,8 +192,8 @@ export function SolarPageContent() {
               <button
                 onClick={() => setActiveTab('commercial')}
                 className={`px-6 py-2 rounded-md font-medium transition-colors ${activeTab === 'commercial'
-                    ? 'bg-primary-500 text-white'
-                    : 'text-neutral-700 hover:bg-neutral-100'
+                  ? 'bg-primary-500 text-white'
+                  : 'text-neutral-700 hover:bg-neutral-100'
                   }`}
               >
                 Commercial / B2B
@@ -363,8 +363,8 @@ export function SolarPageContent() {
                           key={index}
                           onClick={() => setCurrentImageIndex(index)}
                           className={`h-2 rounded-full transition-all duration-300 ${index === currentImageIndex
-                              ? 'w-8 bg-white'
-                              : 'w-2 bg-white/50 hover:bg-white/75'
+                            ? 'w-8 bg-white'
+                            : 'w-2 bg-white/50 hover:bg-white/75'
                             }`}
                           aria-label={`Go to image ${index + 1}`}
                         />
