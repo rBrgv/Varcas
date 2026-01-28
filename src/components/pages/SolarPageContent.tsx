@@ -128,6 +128,53 @@ export function SolarPageContent() {
         </Container>
       </section>
 
+      {/* Partner Logos Section */}
+      <section className="py-16 md:py-20 bg-white border-b border-solar-100/50">
+        <Container>
+          <ScrollReveal variant="fade">
+            <div className="text-center mb-12">
+              <p className="text-sm text-solar-600 uppercase tracking-widest mb-4 font-semibold">
+                Authorised Solar Partners
+              </p>
+              <h2 className="text-2xl md:text-3xl font-bold text-primary-700 mb-4">
+                We are an authorised sales partner for Waaree and Varna Solar
+              </h2>
+              <p className="text-neutral-600 max-w-2xl mx-auto">
+                Trusted partnerships with India's leading solar manufacturers for quality enterprise solutions
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-16">
+            <ScrollReveal variant="scale" delay={0}>
+              <div className="flex flex-col items-center group">
+                <Image
+                  src="https://api.waaree.com/upload/media/image_1_1_1749036191.png"
+                  alt="Waaree Logo"
+                  width={150}
+                  height={80}
+                  className="h-20 md:h-24 w-auto object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                  unoptimized
+                />
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal variant="scale" delay={100}>
+              <div className="flex flex-col items-center group">
+                <Image
+                  src="https://varnasolar.com/images/varna-logo2.png"
+                  alt="Varna Solar Logo"
+                  width={350}
+                  height={210}
+                  className="h-48 md:h-64 w-auto object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                  unoptimized
+                />
+              </div>
+            </ScrollReveal>
+          </div>
+        </Container>
+      </section>
+
       <section className="py-16 bg-gradient-warm relative">
         <div className="absolute inset-0 bg-pattern-mesh opacity-25"></div>
         <Container className="relative z-10">
@@ -135,21 +182,19 @@ export function SolarPageContent() {
             <div className="inline-flex rounded-lg border border-primary-200 bg-white p-1">
               <button
                 onClick={() => setActiveTab('residential')}
-                className={`px-6 py-2 rounded-md font-medium transition-colors ${
-                  activeTab === 'residential'
+                className={`px-6 py-2 rounded-md font-medium transition-colors ${activeTab === 'residential'
                     ? 'bg-primary-500 text-white'
                     : 'text-neutral-700 hover:bg-neutral-100'
-                }`}
+                  }`}
               >
                 Residential
               </button>
               <button
                 onClick={() => setActiveTab('commercial')}
-                className={`px-6 py-2 rounded-md font-medium transition-colors ${
-                  activeTab === 'commercial'
+                className={`px-6 py-2 rounded-md font-medium transition-colors ${activeTab === 'commercial'
                     ? 'bg-primary-500 text-white'
                     : 'text-neutral-700 hover:bg-neutral-100'
-                }`}
+                  }`}
               >
                 Commercial / B2B
               </button>
@@ -243,7 +288,7 @@ export function SolarPageContent() {
               <p className="text-neutral-600">Click on any image to view in full size</p>
             </div>
           </ScrollReveal>
-          
+
           <div className="max-w-4xl mx-auto">
             {/* Image Carousel */}
             <ScrollReveal variant="fade" delay={200}>
@@ -255,9 +300,8 @@ export function SolarPageContent() {
                       {solarImages.map((image, index) => (
                         <div
                           key={index}
-                          className={`absolute inset-0 transition-opacity duration-500 ${
-                            index === currentImageIndex ? 'opacity-100' : 'opacity-0'
-                          }`}
+                          className={`absolute inset-0 transition-opacity duration-500 ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+                            }`}
                         >
                           <Image
                             src={image.src}
@@ -318,11 +362,10 @@ export function SolarPageContent() {
                         <button
                           key={index}
                           onClick={() => setCurrentImageIndex(index)}
-                          className={`h-2 rounded-full transition-all duration-300 ${
-                            index === currentImageIndex
+                          className={`h-2 rounded-full transition-all duration-300 ${index === currentImageIndex
                               ? 'w-8 bg-white'
                               : 'w-2 bg-white/50 hover:bg-white/75'
-                          }`}
+                            }`}
                           aria-label={`Go to image ${index + 1}`}
                         />
                       ))}
@@ -359,7 +402,7 @@ export function SolarPageContent() {
                 />
               </svg>
             </button>
-            
+
             <div className="relative max-w-6xl w-full" onClick={(e) => e.stopPropagation()}>
               <div className="relative aspect-video max-h-[90vh]">
                 <Image
@@ -370,7 +413,7 @@ export function SolarPageContent() {
                   sizes="90vw"
                   priority
                 />
-                
+
                 {/* Navigation Arrows in Modal */}
                 {solarImages.length > 1 && (
                   <>
@@ -421,7 +464,7 @@ export function SolarPageContent() {
                   </>
                 )}
               </div>
-              
+
               {/* Image Counter */}
               <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/50 text-white px-4 py-2 rounded-full backdrop-blur-sm">
                 {selectedImageIndex + 1} / {solarImages.length}

@@ -13,24 +13,35 @@ export function Footer() {
               <h3 className="text-2xl font-bold text-white">Varcas Enterprises</h3>
             </div>
             <p className="text-neutral-300 mb-3 leading-relaxed">
-              Enterprise solutions for Solar, Telecom, and HR services.
+              Strategic HR solutions for growing enterprises.
             </p>
             <p className="text-sm text-neutral-400 leading-relaxed">
-              Serving airports, educational institutions, and commercial facilities across Andhra Pradesh.
+              Expert recruitment and talent management across Andhra Pradesh. Also featuring Varcas Solar Division for enterprise energy solutions.
             </p>
           </div>
           <div>
-            <h3 className="text-lg font-bold mb-6 text-white">Quick Links</h3>
+            <h3 className="text-lg font-bold mb-6 text-white">Our Services</h3>
             <ul className="space-y-3">
               <li>
                 <Link
-                  href="/services"
-                  className="text-neutral-300 hover:text-accent-400 transition-colors flex items-center gap-2"
+                  href="/services/hr"
+                  className="text-neutral-300 hover:text-hr-400 transition-colors flex items-center gap-2"
                 >
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
-                  Services
+                  HR Services
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/solar"
+                  className="text-neutral-300 hover:text-solar-400 transition-colors flex items-center gap-2"
+                >
+                  <svg className="w-4 h-4 text-solar-400" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z" />
+                  </svg>
+                  Varcas Solar Division
                 </Link>
               </li>
               <li>

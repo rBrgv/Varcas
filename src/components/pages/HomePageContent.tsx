@@ -37,10 +37,11 @@ export function HomePageContent() {
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full h-full object-cover opacity-40"
+          className="absolute inset-0 w-full h-full object-cover opacity-30"
           aria-hidden="true"
         >
-          <source src="/solar-terrace-video.mp4" type="video/mp4" />
+          {/* HR-focused background video (saved in /public as hr-team-meeting.mp4) */}
+          <source src="/hr-team-meeting.mp4" type="video/mp4" />
         </video>
 
         {/* Video Overlay for better text readability */}
@@ -52,7 +53,7 @@ export function HomePageContent() {
           <div className="absolute top-0 right-0 w-2/5 h-2/5 bg-secondary-500/20 rounded-full blur-3xl animate-float"></div>
           <div className="absolute bottom-0 left-0 w-2/5 h-2/5 bg-accent-500/15 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
         </div>
-        
+
         {/* Elegant Grid Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div
@@ -73,40 +74,57 @@ export function HomePageContent() {
         <Container className="relative z-10">
           <div className="text-center max-w-5xl mx-auto">
             <ScrollReveal variant="fade" delay={100}>
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight tracking-tight">
-                <span className="block text-white mb-2" style={{ 
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight tracking-tight">
+                <span className="block text-white mb-2" style={{
                   textShadow: '0 4px 20px rgba(0, 0, 0, 0.3)',
                   letterSpacing: '-0.02em'
                 }}>
-                  Varcas
+                  Strategic HR Solutions
                 </span>
-                <span className="block bg-gradient-to-r from-accent-300 via-white to-accent-300 bg-clip-text text-transparent" style={{
+                <span className="block bg-gradient-to-r from-accent-300 via-white to-accent-300 bg-clip-text text-transparent text-4xl md:text-5xl lg:text-6xl pb-2" style={{
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
-                  filter: 'drop-shadow(0 2px 10px rgba(255, 184, 77, 0.3))'
+                  filter: 'drop-shadow(0 2px 10px rgba(255, 184, 77, 0.3))',
+                  lineHeight: '1.3'
                 }}>
-                  Enterprises
+                  for Growing Enterprises
                 </span>
               </h1>
             </ScrollReveal>
 
             <ScrollReveal variant="fade" delay={200}>
-              <div className="flex flex-wrap items-center justify-center gap-3 md:gap-5 mb-8 text-lg md:text-2xl">
-                <span className="text-white/95 font-medium">{t('service.solar.title')}</span>
-                <span className="text-accent-400 text-xl">●</span>
-                <span className="text-white/95 font-medium">{t('service.telecom.title')}</span>
-                <span className="text-accent-400 text-xl">●</span>
-                <span className="text-white/95 font-medium">{t('service.hr.title')}</span>
-              </div>
+              <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto mb-8 font-medium">
+                Connecting talent with opportunity across India
+              </p>
             </ScrollReveal>
 
             <ScrollReveal variant="fade" delay={300}>
-              <p className="text-lg md:text-xl text-white/85 max-w-3xl mx-auto leading-relaxed font-light">
-                {t(
-                  'home.heroSubtitle',
-                  'Trusted partner for enterprise solutions across Andhra Pradesh. Serving airports, educational institutions, and commercial facilities.'
-                )}
+              <p className="text-base md:text-lg text-white/75 max-w-2xl mx-auto leading-relaxed mb-10">
+                Expert recruitment and talent management services for all enterprises. Also featuring Varcas Solar Division for enterprise energy solutions who have experience with solar for airports, educational institutions, and commercial facilities.
               </p>
+            </ScrollReveal>
+
+            <ScrollReveal variant="fade" delay={400}>
+              <div className="flex flex-wrap items-center justify-center gap-4">
+                <Button
+                  variant="secondary"
+                  size="lg"
+                  as="a"
+                  href="/services/hr"
+                  className="hover-lift shadow-xl"
+                >
+                  Explore HR Services
+                </Button>
+                <Button
+                  variant="outline"
+                  size="lg"
+                  as="a"
+                  href="/services/solar"
+                  className="bg-white/10 border-white/30 text-white hover:bg-white/20 hover-lift"
+                >
+                  Visit Varcas Solar →
+                </Button>
+              </div>
             </ScrollReveal>
           </div>
         </Container>
@@ -119,61 +137,20 @@ export function HomePageContent() {
         </div>
       </section>
 
-      {/* Partner Logos Section */}
-      <section className="py-16 md:py-24 bg-white border-b border-primary-100/50">
-        <Container>
-          <ScrollReveal variant="fade">
-            <div className="text-center mb-12">
-              <p className="text-sm text-neutral-500 uppercase tracking-widest mb-4 font-semibold">
-                Authorised Partners
-              </p>
-              <h2 className="text-2xl md:text-3xl font-bold text-primary-700 mb-4">
-                We are an authorised sales partner for Waaree and Varna Solar
-              </h2>
-            </div>
-          </ScrollReveal>
-          
-          <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
-            <ScrollReveal variant="scale" delay={0}>
-              <div className="flex flex-col items-center group">
-                <Image
-                  src="https://api.waaree.com/upload/media/image_1_1_1749036191.png"
-                  alt="Waaree Logo"
-                  width={150}
-                  height={80}
-                  className="h-16 md:h-20 w-auto object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-300"
-                  unoptimized
-                />
-              </div>
-            </ScrollReveal>
-            
-            <ScrollReveal variant="scale" delay={100}>
-              <div className="flex flex-col items-center group">
-                <Image
-                  src="https://varnasolar.com/images/varna-logo2.png"
-                  alt="Varna Solar Logo"
-                  width={350}
-                  height={210}
-                  className="h-40 md:h-56 w-auto object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-300"
-                  unoptimized
-                />
-              </div>
-            </ScrollReveal>
-          </div>
-        </Container>
-      </section>
-
       {/* Statistics Section */}
       <section className="py-16 md:py-24 bg-gradient-elegant border-b border-primary-100/50">
         <Container>
           <ScrollReveal variant="fade">
-            <h2 className="text-3xl md:text-4xl font-bold text-center text-primary-700 mb-12">
-              Our Achievements
+            <h2 className="text-3xl md:text-4xl font-bold text-center text-primary-700 mb-4">
+              Our Track Record
             </h2>
+            <p className="text-center text-neutral-600 mb-12 max-w-2xl mx-auto">
+              Trusted by leading enterprises across India for strategic HR solutions
+            </p>
           </ScrollReveal>
           <Statistics
             stats={[
-              { value: 500, suffix: '+', label: 'Projects Completed' },
+              { value: 500, suffix: '+', label: 'Successful Placements' },
               { value: 50, suffix: '+', label: 'Enterprise Clients' },
               { value: 15, suffix: '+', label: 'Years Experience' },
               { value: 100, suffix: '%', label: 'Client Satisfaction' },
@@ -189,188 +166,107 @@ export function HomePageContent() {
           <ScrollReveal variant="fade">
             <div className="text-center mb-12">
               <p className="text-xs text-neutral-500 uppercase tracking-widest mb-4 font-semibold">
-                {t('home.trustedBy', 'Trusted by Leading Organizations')}
+                Our Expertise
               </p>
               <h2 className="text-3xl md:text-4xl font-bold text-primary-700 mb-2">
-                Serving Excellence Across Industries
+                HR Service Specializations
               </h2>
               <p className="text-neutral-600 max-w-2xl mx-auto">
-                From airports to educational institutions, we deliver trusted solutions
+                Comprehensive recruitment solutions tailored for your workforce needs
               </p>
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
             <ScrollReveal variant="scale" delay={0}>
-              <Card className="text-center group hover:shadow-large transition-all duration-300 hover-lift">
-                <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-primary-600 via-primary-500 to-secondary-500 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                  <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+              <Card className="text-center group hover:shadow-large transition-all duration-300 hover-lift border-t-4 border-t-hr-500">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-hr-600 via-hr-500 to-hr-400 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-primary-700 mb-2 group-hover:text-primary-600 transition-colors">
-                  Airports
+                <h3 className="text-lg font-bold text-primary-700 mb-2 group-hover:text-hr-600 transition-colors">
+                  Bulk Hiring Solutions
                 </h3>
-                <p className="text-sm text-neutral-600">Aviation facilities & infrastructure</p>
+                <p className="text-sm text-neutral-600">Large-scale recruitment for rapid workforce expansion</p>
               </Card>
             </ScrollReveal>
+
             <ScrollReveal variant="scale" delay={100}>
-              <Card className="text-center group hover:shadow-large transition-all duration-300 hover-lift">
-                <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-secondary-500 via-secondary-400 to-accent-500 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                  <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <Card className="text-center group hover:shadow-large transition-all duration-300 hover-lift border-t-4 border-t-hr-500">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-secondary-600 via-secondary-500 to-accent-500 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-bold text-primary-700 mb-2 group-hover:text-hr-600 transition-colors">
+                  Executive Search
+                </h3>
+                <p className="text-sm text-neutral-600">Strategic hiring for leadership and management positions</p>
+              </Card>
+            </ScrollReveal>
+
+            <ScrollReveal variant="scale" delay={200}>
+              <Card className="text-center group hover:shadow-large transition-all duration-300 hover-lift border-t-4 border-t-hr-500">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-primary-600 via-primary-500 to-secondary-500 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-primary-700 mb-2 group-hover:text-primary-600 transition-colors">
-                  Educational Institutions
+                <h3 className="text-lg font-bold text-primary-700 mb-2 group-hover:text-hr-600 transition-colors">
+                  Campus Recruitment
                 </h3>
-                <p className="text-sm text-neutral-600">Universities, colleges & schools</p>
+                <p className="text-sm text-neutral-600">Fresh talent acquisition from colleges and universities</p>
               </Card>
             </ScrollReveal>
-            <ScrollReveal variant="scale" delay={200}>
-              <Card className="text-center group hover:shadow-large transition-all duration-300 hover-lift">
-                <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-solar-500 via-solar-400 to-accent-500 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                  <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+
+            <ScrollReveal variant="scale" delay={300}>
+              <Card className="text-center group hover:shadow-large transition-all duration-300 hover-lift border-t-4 border-t-hr-500">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-accent-600 via-accent-500 to-accent-400 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-primary-700 mb-2 group-hover:text-primary-600 transition-colors">
-                  Commercial Facilities
+                <h3 className="text-lg font-bold text-primary-700 mb-2 group-hover:text-hr-600 transition-colors">
+                  Contract Staffing
                 </h3>
-                <p className="text-sm text-neutral-600">Industrial & commercial establishments</p>
+                <p className="text-sm text-neutral-600">Flexible workforce solutions for project-based needs</p>
+              </Card>
+            </ScrollReveal>
+
+            <ScrollReveal variant="scale" delay={400}>
+              <Card className="text-center group hover:shadow-large transition-all duration-300 hover-lift border-t-4 border-t-hr-500">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-hr-700 via-hr-600 to-hr-500 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-bold text-primary-700 mb-2 group-hover:text-hr-600 transition-colors">
+                  Skilled Labor Supply
+                </h3>
+                <p className="text-sm text-neutral-600">Specialized tradespeople and technical workforce</p>
+              </Card>
+            </ScrollReveal>
+
+            <ScrollReveal variant="scale" delay={500}>
+              <Card className="text-center group hover:shadow-large transition-all duration-300 hover-lift border-t-4 border-t-hr-500">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-primary-700 via-primary-600 to-secondary-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-bold text-primary-700 mb-2 group-hover:text-hr-600 transition-colors">
+                  Talent Consulting
+                </h3>
+                <p className="text-sm text-neutral-600">Strategic workforce planning and HR advisory services</p>
               </Card>
             </ScrollReveal>
           </div>
         </Container>
       </section>
 
-      {/* Coverage Section */}
-      <section className="py-20 md:py-24 bg-gradient-warm relative">
-        <div className="absolute inset-0 bg-pattern-mesh opacity-20"></div>
-        <Container className="relative z-10">
-          <ScrollReveal variant="fade">
-            <SectionHeading className="text-center mb-12">
-              {t('home.coverage', 'Our Coverage')}
-            </SectionHeading>
-            <p className="text-center text-neutral-700 mb-12 max-w-2xl mx-auto text-lg">
-              Serving enterprise clients across Andhra Pradesh and India with comprehensive solutions
-            </p>
-          </ScrollReveal>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-            <ScrollReveal variant="left" delay={0}>
-              <Card className="h-full hover:shadow-large transition-all duration-300 hover-lift border-l-4 border-l-primary-500 bg-gradient-to-br from-white to-primary-50/40">
-                <div className="flex items-start gap-4 mb-6">
-                  <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary-600 via-primary-500 to-secondary-500 flex items-center justify-center flex-shrink-0 shadow-md">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-primary-700 mb-2">
-                      {t('home.andhraPradesh', 'Andhra Pradesh')}
-                    </h3>
-                    <p className="text-neutral-600 mb-4">Primary service region with extensive presence</p>
-                  </div>
-                </div>
-                <div className="space-y-3">
-                  {['Tirupati & Chittoor District', 'Visakhapatnam', 'Vijayawada & Guntur', 'Nellore & Prakasam', 'Kurnool & Anantapur'].map((city) => (
-                    <div key={city} className="flex items-center gap-3 text-neutral-700">
-                      <div className="w-2 h-2 rounded-full bg-primary-500"></div>
-                      <span className="font-medium">{city}</span>
-                    </div>
-                  ))}
-                </div>
-              </Card>
-            </ScrollReveal>
-
-            <ScrollReveal variant="right" delay={100}>
-              <Card className="h-full hover:shadow-large transition-all duration-300 hover-lift border-l-4 border-l-secondary-500 bg-gradient-to-br from-white to-secondary-50/40">
-                <div className="flex items-start gap-4 mb-6">
-                  <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-secondary-500 to-secondary-600 flex items-center justify-center flex-shrink-0 shadow-md">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-primary-700 mb-2">Key Service Areas</h3>
-                    <p className="text-neutral-600 mb-4">Specialized solutions for major sectors</p>
-                  </div>
-                </div>
-                <div className="space-y-3">
-                  {['Airports & Aviation Facilities', 'Educational Institutions & Universities', 'Commercial & Industrial Facilities', 'Government & Public Sector', 'Healthcare & Hospitality'].map((area) => (
-                    <div key={area} className="flex items-center gap-3 text-neutral-700">
-                      <div className="w-2 h-2 rounded-full bg-secondary-500"></div>
-                      <span className="font-medium">{area}</span>
-                    </div>
-                  ))}
-                </div>
-              </Card>
-            </ScrollReveal>
-          </div>
-
-          {!showCoverage && (
-            <div className="text-center mt-8">
-              <Button
-                variant="outline"
-                onClick={() => setShowCoverage(true)}
-                size="lg"
-                className="hover-lift"
-              >
-                {t('home.expandCoverage', 'View Pan-India Coverage')}
-              </Button>
-            </div>
-          )}
-
-          {showCoverage && (
-            <ScrollReveal variant="up" delay={0}>
-              <Card className="mt-8 p-8 bg-gradient-to-br from-white to-accent-50/40 border-accent-100/50 shadow-large">
-                <h3 className="text-2xl font-bold text-primary-700 text-center mb-6">
-                  {t('home.india', 'Pan-India Presence')}
-                </h3>
-                <p className="text-neutral-700 text-center mb-8 max-w-xl mx-auto">
-                  We extend our services beyond Andhra Pradesh, with a growing footprint across major states in India.
-                </p>
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 mb-8">
-                  {['Telangana', 'Karnataka', 'Tamil Nadu', 'Kerala', 'Maharashtra', 'Gujarat', 'Delhi NCR', 'Uttar Pradesh'].map((state) => (
-                    <div key={state} className="text-center p-3 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                      <div className="w-3 h-3 mx-auto mb-2 rounded-full bg-solar-500"></div>
-                      <span className="text-sm font-medium text-neutral-700">{state}</span>
-                    </div>
-                  ))}
-                </div>
-              </Card>
-            </ScrollReveal>
-          )}
-        </Container>
-      </section>
-
-      {/* Resources Section */}
-      <Resources
-        resources={[
-          {
-            id: '1',
-            title: 'Company Brochure',
-            description: 'Download our comprehensive company brochure',
-            type: 'brochure',
-          },
-          {
-            id: '2',
-            title: 'Solar Solutions Guide',
-            description: 'Complete guide to our solar solutions',
-            type: 'guide',
-          },
-          {
-            id: '3',
-            title: 'Case Study: Airport Project',
-            description: 'Learn about our successful airport solar installation',
-            type: 'case-study',
-          },
-        ]}
-      />
-
-      {/* Services Section */}
+      {/* Services Overview Section */}
       <section className="py-20 md:py-24 bg-gradient-elegant relative">
         <div className="absolute inset-0 bg-pattern-mesh opacity-30"></div>
         <Container className="relative z-10">
@@ -381,12 +277,37 @@ export function HomePageContent() {
             <p className="text-center text-neutral-700 mb-16 max-w-2xl mx-auto text-xl leading-relaxed font-medium">
               {t(
                 'home.servicesDesc',
-                'Comprehensive solutions tailored for enterprise clients across multiple sectors'
+                'HR recruitment and talent solutions at the core, with Solar and Telecom services supporting enterprises across Andhra Pradesh.'
               )}
             </p>
           </ScrollReveal>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* HR first for higher prominence */}
             <ScrollReveal variant="scale" delay={0}>
+              <Link href="/services/hr">
+                <Card className="group hover:shadow-large transition-all duration-300 cursor-pointer h-full border-l-4 border-l-hr-500 hover:border-l-hr-600 hover:-translate-y-3 hover:scale-[1.02] bg-gradient-to-br from-white to-hr-50/40">
+                  <div className="text-center">
+                    <div className="inline-flex items-center gap-3 mb-4 px-3 py-1 rounded-full bg-hr-100 text-hr-700 text-xs font-semibold uppercase tracking-wide">
+                      <span className="w-2 h-2 rounded-full bg-hr-500" />
+                      Core Service
+                    </div>
+                    <div className="flex justify-center mb-6 text-hr-500 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                      <HRIcon />
+                    </div>
+                    <h3 className="text-2xl font-bold text-primary-700 mb-4 group-hover:text-hr-600 transition-colors">
+                      {t('service.hr.title')}
+                    </h3>
+                    <p className="text-neutral-700 leading-relaxed text-base">
+                      {t(
+                        'home.hrDesc',
+                        'Strategic HR recruitment and talent management services for growing enterprises.'
+                      )}
+                    </p>
+                  </div>
+                </Card>
+              </Link>
+            </ScrollReveal>
+            <ScrollReveal variant="scale" delay={100}>
               <Link href="/services/solar">
                 <Card className="group hover:shadow-large transition-all duration-300 cursor-pointer h-full border-l-4 border-l-solar-500 hover:border-l-solar-600 hover:-translate-y-3 hover:scale-[1.02] bg-gradient-to-br from-white to-solar-50/30">
                   <div className="text-center">
@@ -399,14 +320,14 @@ export function HomePageContent() {
                     <p className="text-neutral-700 leading-relaxed text-base">
                       {t(
                         'home.solarDesc',
-                        'Enterprise-grade solar solutions for airports, institutions, and commercial facilities'
+                        'Enterprise-grade solar solutions for airports, institutions, and commercial facilities.'
                       )}
                     </p>
                   </div>
                 </Card>
               </Link>
             </ScrollReveal>
-            <ScrollReveal variant="scale" delay={100}>
+            <ScrollReveal variant="scale" delay={200}>
               <Link href="/services/telecom">
                 <Card className="group hover:shadow-large transition-all duration-300 cursor-pointer h-full border-l-4 border-l-telecom-500 hover:border-l-telecom-600 hover:-translate-y-3 hover:scale-[1.02] bg-gradient-to-br from-white to-telecom-50/30">
                   <div className="text-center">
@@ -419,27 +340,7 @@ export function HomePageContent() {
                     <p className="text-neutral-700 leading-relaxed text-base">
                       {t(
                         'home.telecomDesc',
-                        'Professional telecom infrastructure and network solutions'
-                      )}
-                    </p>
-                  </div>
-                </Card>
-              </Link>
-            </ScrollReveal>
-            <ScrollReveal variant="scale" delay={200}>
-              <Link href="/services/hr">
-                <Card className="group hover:shadow-large transition-all duration-300 cursor-pointer h-full border-l-4 border-l-hr-500 hover:border-l-hr-600 hover:-translate-y-3 hover:scale-[1.02] bg-gradient-to-br from-white to-hr-50/30">
-                  <div className="text-center">
-                    <div className="flex justify-center mb-6 text-hr-500 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-                      <HRIcon />
-                    </div>
-                    <h3 className="text-2xl font-bold text-primary-700 mb-4 group-hover:text-hr-600 transition-colors">
-                      {t('service.hr.title')}
-                    </h3>
-                    <p className="text-neutral-700 leading-relaxed text-base">
-                      {t(
-                        'home.hrDesc',
-                        'Strategic HR recruitment and talent management services'
+                        'Professional telecom infrastructure and network solutions.'
                       )}
                     </p>
                   </div>
@@ -450,35 +351,54 @@ export function HomePageContent() {
         </Container>
       </section>
 
-      {/* Testimonials Section */}
+      {/* Testimonials Section - HR Focused Carousel */}
       <Testimonials
+        carousel={true}
         testimonials={[
           {
             id: '1',
-            name: 'Dr. Priya Sharma',
-            role: 'Principal',
-            company: 'AP Educational Institution',
-            content: 'Professional service from start to finish. The solar panels are performing excellently and our institution is now energy independent.',
+            name: 'Rajesh Kumar',
+            role: 'HR Director',
+            company: 'Tech Solutions Pvt Ltd',
+            content: 'Varcas transformed our hiring process. They understood our technical requirements perfectly and delivered highly skilled candidates within weeks. Their recruitment team is professional, responsive, and truly cares about finding the right fit.',
             rating: 5,
-            service: 'solar',
+            service: 'hr',
           },
           {
             id: '2',
-            name: 'Vikram Reddy',
-            role: 'Operations Director',
-            company: 'Commercial Complex',
-            content: 'Outstanding quality and service. The installation was completed on time and the team was very professional throughout the process.',
+            name: 'Meena Patel',
+            role: 'Operations Manager',
+            company: 'Manufacturing Excellence',
+            content: 'We needed to scale our workforce quickly for a new facility. Varcas provided us with 50+ qualified workers in record time. Their screening process is thorough and the quality of candidates has been exceptional.',
             rating: 5,
-            service: 'solar',
+            service: 'hr',
           },
           {
             id: '3',
-            name: 'Anil Kumar',
-            role: 'IT Manager',
-            company: 'Telecom Company',
-            content: 'Excellent telecom infrastructure solutions. The team provided reliable network setup and ongoing support.',
+            name: 'Suresh Reddy',
+            role: 'CEO',
+            company: 'Hospitality Group',
+            content: 'Finding skilled hospitality staff was always a challenge until we partnered with Varcas. They have a deep understanding of our industry and consistently deliver candidates who exceed our expectations.',
             rating: 5,
-            service: 'telecom',
+            service: 'hr',
+          },
+          {
+            id: '4',
+            name: 'Priya Sharma',
+            role: 'Plant Manager',
+            company: 'Industrial Solutions',
+            content: 'Varcas has been our trusted manpower partner for over 3 years. Their ability to provide skilled technicians and operators on short notice has been crucial to our operations. Highly recommend their services!',
+            rating: 5,
+            service: 'hr',
+          },
+          {
+            id: '5',
+            name: 'Arun Krishnan',
+            role: 'Director',
+            company: 'Educational Institution',
+            content: 'We rely on Varcas for all our non-teaching staff recruitment. From security personnel to administrative staff, they have helped us build a reliable and professional support team. Excellent service!',
+            rating: 5,
+            service: 'hr',
           },
         ]}
       />
